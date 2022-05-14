@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 504749307
+    locked: 0
+  - name: 2
+    uniqueID: 878339881
+    locked: 0
+  - name: 3
+    uniqueID: 2829400179
+    locked: 0
+  - name: 4
+    uniqueID: 21980875
+    locked: 0
+  - name: 5
+    uniqueID: 1168741549
+    locked: 0
+  - name: New Layer
+    uniqueID: 624661659
+    locked: 0
+  - name: New Layer
+    uniqueID: 614109749
+    locked: 0
+  - name: New Layer
+    uniqueID: 1123534743
+    locked: 0
+  - name: Player
+    uniqueID: 555416193
+    locked: 0
