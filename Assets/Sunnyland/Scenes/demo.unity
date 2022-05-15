@@ -6764,7 +6764,7 @@ MonoBehaviour:
     m_Bits: 55
   m_GroundCheck: {fileID: 803200921}
   m_CeilingCheck: {fileID: 1721966611}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 473593256}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []

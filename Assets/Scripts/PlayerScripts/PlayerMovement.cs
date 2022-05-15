@@ -4,41 +4,67 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
 
-    public CharacterController2D controller;
-    public Animator animator;
+    private Rigidbody2D rb;
+    private SpriteRenderer sprite;
+    private Animator animation;
 
-    public float runSpeed = 40f;
+    private float dirX = 0f;
+    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float jumpForce = 14f;
 
-    float horizontalMove = 0f;
-    bool jump = false;
-    bool crouch = false;
+    private enum MovementState { idle, running, jumping, falling, hurt }
 
-    void Update()
+    private void Start ()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        rb = GetComponent<Rigidbody2D>();
+        animation = GetComponent<Animator>();
+    }
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    private void Update()
+    {
+        dirX = Input.GetAxis("Horizontal");
+        sprite = GetComponent<SpriteRenderer>();
+        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump")) 
+        if (Input.GetButtonDown("Jump"))
         {
-            jump = true;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        } else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+        UpdateAnimationState();
 
     }
 
-
-    void FixedUpdate()
+    private void UpdateAnimationState()
     {
-        // move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
+        MovementState state;
+
+        if (dirX > 0f)
+        {
+            state = MovementState.running;
+            sprite.flipX = false;
+        }
+        else if (dirX < 0f)
+        {
+            state = MovementState.running;
+            sprite.flipX = true;
+        }
+        else
+        {
+            state = MovementState.idle;
+        }
+
+        if (rb.velocity.y > .1f)
+        {
+            state = MovementState.jumping;
+        }
+        else if (rb.velocity.y < -.1f)
+        {
+            state = MovementState.falling;
+        }
+
+        animation.SetInteger("state", (int)state);
+
     }
+
 }
