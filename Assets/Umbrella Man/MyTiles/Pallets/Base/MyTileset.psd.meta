@@ -108,6 +108,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -784,6 +785,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MyTileset_5: -550201926244759296
+      MyTileset_9: -591348422841820757
+      MyTileset_25: -915932318408525185
+      MyTileset_14: 7826872144968337296
+      MyTileset_15: 7980946170743810622
+      MyTileset_3: -2561707725548400301
+      MyTileset_7: 8454330311071922048
+      MyTileset_24: 4047049968906740992
+      MyTileset_13: -2485167976581956543
+      MyTileset_17: -7354194436942341127
+      MyTileset_1: 6112622269025022840
+      MyTileset_12: -8272090000349704063
+      MyTileset_27: -416942156916106905
+      MyTileset_26: 5998427718328318345
+      MyTileset_10: -8492657456652413914
+      MyTileset_4: 1432824108029792913
+      MyTileset_6: 6820012697388244713
+      MyTileset_16: -533464542138051658
+      MyTileset_18: -4613427512455067608
+      MyTileset_21: 2778617866967271098
+      MyTileset_2: 4963899284825397122
+      MyTileset_23: 9042163176505778425
+      MyTileset_19: 7096005696918677879
+      MyTileset_20: 8618775529589097297
+      MyTileset_22: -7134505394517529890
+      MyTileset_8: -1142369816335983682
+      MyTileset_0: 6460578884633912405
+      MyTileset_11: 2454503787988030965
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
