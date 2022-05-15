@@ -10,14 +10,18 @@ public class PlayerMovement : MonoBehaviour{
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
+    float verticalMove = 0f;
     bool jump = false;
-    bool crouch = false;
+    bool crouch;
 
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
+        verticalMove = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        animator.SetFloat("Height", Mathf.Abs(verticalMove));
+        animator.SetBool("IsGrounded", jump==true);
 
         if (Input.GetButtonDown("Jump")) 
         {
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour{
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
+            
         } else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
